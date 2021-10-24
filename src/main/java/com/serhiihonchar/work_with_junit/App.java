@@ -7,6 +7,9 @@ public class App {
     }
 
     public static int div(int x, int y) {
+        if (y == 0) {
+            throw new ArithmeticException("Can't divide by zero");
+        }
         return x / y;
     }
 }

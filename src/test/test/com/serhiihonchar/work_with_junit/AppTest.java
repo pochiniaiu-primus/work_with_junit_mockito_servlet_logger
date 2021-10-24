@@ -34,4 +34,9 @@ public class AppTest {
     public void testAdd2() {
         System.out.println("test2");
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void zeroDenominatorShouldThrowException() {
+        App.div(5, 0);
+    }
 }
